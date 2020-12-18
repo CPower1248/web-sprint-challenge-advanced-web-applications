@@ -1,6 +1,6 @@
 import axiosWithAuth from "./axiosWithAuth"
 
-const fetchColors = () => {
+export const fetchColors = () => {
     axiosWithAuth().get("http://localhost:5000/api/colors")
     .then(res => {
         return res
@@ -10,5 +10,3 @@ const fetchColors = () => {
         return err
     })
 }
-
-export default fetchColors
